@@ -48,8 +48,8 @@ function Header({ isDarkMode, setIsDarkMode }) {
 
       <HeaderRight>
         <HeaderUserInfo>
-          <Avatar />
-          <h4>Username</h4>
+          <Avatar src="https://images.unsplash.com/photo-1537815749002-de6a533c64db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=845&q=80" />
+          <h4>rizji</h4>
         </HeaderUserInfo>
 
         <IconButton>

@@ -14,6 +14,7 @@ import Button from "./components/UI/Button/Button.component";
 import Card from "./components/UI/Card/Card.component";
 import Container from "./components/UI/Container/Container.component";
 import Header from "./components/UI/Header/Header.component";
+import Sidebar from "./components/UI/Sidebar/Sidebar.component";
 
 // Component: App
 function App() {
@@ -54,6 +55,7 @@ function App() {
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Sidebar />
     </ThemeProvider>
   );
 }
