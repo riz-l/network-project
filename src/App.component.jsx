@@ -55,7 +55,9 @@ function App() {
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Container>
       <Sidebar />
+      </Container>
     </ThemeProvider>
   );
 }
