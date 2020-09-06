@@ -31,13 +31,13 @@ function Header({ isDarkMode, setIsDarkMode }) {
           {isDarkMode ? (
             <Brightness2Icon
               style={{
-                color: "#ababae",
+                color: "#878c92",
               }}
             />
           ) : (
             <Brightness7Icon
               style={{
-                color: "#38383d",
+                color: "#878c92",
               }}
             />
           )}
@@ -48,7 +48,7 @@ function Header({ isDarkMode, setIsDarkMode }) {
 
       <HeaderRight>
         <HeaderUserInfo>
-          <Avatar src="https://images.unsplash.com/photo-1537815749002-de6a533c64db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=845&q=80" />
+          <Avatar src="https://images.unsplash.com/photo-1486649567693-aaa9b2e59385?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
           <h4>rizji</h4>
         </HeaderUserInfo>
 
@@ -99,8 +99,12 @@ const HeaderLeft = styled.div`
   }
 
   & .MuiButtonBase-root {
-    background: ${(props) => props.theme.colors.global.secondaryBackground};
     margin-left: 10px;
+    transition: all 250ms linear;
+
+    &:hover {
+      background: ${(props) => props.theme.colors.global.secondaryBackground};
+    }
   }
 `;
 
@@ -124,7 +128,7 @@ const HeaderRight = styled.div`
 
     & .MuiIconButton-label {
       & .MuiSvgIcon-root {
-        color: ${(props) => props.theme.colors.global.secondaryText};
+        color: ${(props) => props.theme.colors.global.primaryText};
       }
     }
   }

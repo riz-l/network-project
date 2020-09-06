@@ -17,7 +17,7 @@ function Sidebar() {
   return (
     <SideBarContainer>
       <SidebarRow
-        src="https://images.unsplash.com/photo-1537815749002-de6a533c64db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=845&q=80"
+        src="https://images.unsplash.com/photo-1486649567693-aaa9b2e59385?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
         title="rizji"
       />
       <SidebarRow Icon={HomeIcon} title="Home" />

@@ -25,13 +25,19 @@ const SideBarRowContainer = styled.div`
   cursor: pointer;
   display: flex;
   padding: 10px;
+  transition: all 250ms linear;
 
   &:hover {
-    background: ${(props) => props.theme.colors.global.secondaryBackground};
+    background: ${(props) => props.theme.colors.global.primaryBackground};
     border-radius: 10px;
+
+    & h4 {
+      color: ${(props) => props.theme.colors.global.primaryText};
+    }
   }
 
   & h4 {
+    color: ${(props) => props.theme.colors.global.secondaryText};
     font-weight: 400;
     margin-left: 20px;
   }

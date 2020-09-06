@@ -1,12 +1,12 @@
 export default {
   colors: {
     global: {
-      primaryBackground: "#2A2A2E",
-      secondaryBackground: "#38383D",
-      primaryText: "#F4F4F5",
-      secondaryText: "#ABABAE",
-      primaryHighlight: "#fb3667",
-      secondaryHighlight: "#1effbc",
+      primaryBackground: "#23262b",
+      secondaryBackground: "#1c1e20",
+      tertiaryBackground: "#878c92",
+      primaryText: "#ffffff",
+      secondaryText: "#edeef2",
+      primaryHighlight: "#f9545e",
     },
     background: "#2e3440",
     cardBackground: "#3b4252",
