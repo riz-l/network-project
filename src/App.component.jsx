@@ -54,13 +54,24 @@ function App() {
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
 
+  // User control
+  const user = null;
+
   return (
-    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-      <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Container>
-        <Sidebar />
-      </Container>
-    </ThemeProvider>
+    <>
+      {!user ? (
+        <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+          <Login isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+        </ThemeProvider>
+      ) : (
+        <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+          <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+          <Container>
+            <Sidebar />
+          </Container>
+        </ThemeProvider>
+      )}
+    </>
   );
 }
 

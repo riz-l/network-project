@@ -5,6 +5,7 @@ import styled from "styled-components";
 // Import: Material UI Icons
 import HomeIcon from "@material-ui/icons/Home";
 import GroupIcon from "@material-ui/icons/Group";
+import FlagIcon from "@material-ui/icons/Flag";
 import BuildIcon from "@material-ui/icons/Build";
 import PermMediaIcon from "@material-ui/icons/PermMedia";
 import SettingsIcon from "@material-ui/icons/Settings";
@@ -22,6 +23,7 @@ function Sidebar() {
       />
       <SidebarRow Icon={HomeIcon} title="Home" />
       <SidebarRow Icon={GroupIcon} title="Looking for Group" />
+      <SidebarRow Icon={FlagIcon} title="Pages" />
       <SidebarRow Icon={BuildIcon} title="Builds" />
       <SidebarRow Icon={PermMediaIcon} title="Media" />
       <SidebarRow Icon={SettingsIcon} title="Settings" />
