@@ -2,6 +2,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// Import: StateProvider
+import { useStateValue } from "../../../StateProvider";
+
 // Import: Material UI Icons
 import HomeIcon from "@material-ui/icons/Home";
 import GroupIcon from "@material-ui/icons/Group";
@@ -15,12 +18,12 @@ import SidebarRow from "./SidebarRow/SidebarRow.component";
 
 // UI: Sidebar
 function Sidebar() {
+  // Pulls user from StateProvider
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <SideBarContainer>
-      <SidebarRow
-        src="https://gamespot1.cbsistatic.com/uploads/scale_landscape/mig/6/2/0/6/2236206-gabe_newell_59018_screen.jpg"
-        title="Gabe Newell"
-      />
+      <SidebarRow src={user.photoURL} title={user.displayName} />
       <SidebarRow Icon={HomeIcon} title="Home" />
       <SidebarRow Icon={GroupIcon} title="Looking for Group" />
       <SidebarRow Icon={FlagIcon} title="Pages" />

@@ -2,6 +2,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// Import: StateProvider
+import { useStateValue } from "../../../StateProvider";
+
 // Import: Material UI Icons
 import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
@@ -21,6 +24,9 @@ import { ReactComponent as Logo2Dark } from "../../../assets/images/logo2-dark.s
 
 // UI: Header
 function Header({ isDarkMode, setIsDarkMode }) {
+  // Pulls user from StateProvider
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <HeaderContainer>
       <HeaderLeft>
@@ -29,10 +35,6 @@ function Header({ isDarkMode, setIsDarkMode }) {
         ) : (
           <Logo2Dark className="HeaderLogo" />
         )}
-        {/* <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png"
-          alt="Facebook Logo"
-        /> */}
       </HeaderLeft>
 
       <HeaderCenter></HeaderCenter>
@@ -60,8 +62,8 @@ function Header({ isDarkMode, setIsDarkMode }) {
         </IconButton>
 
         <HeaderUserInfo>
-          <Avatar src="https://gamespot1.cbsistatic.com/uploads/scale_landscape/mig/6/2/0/6/2236206-gabe_newell_59018_screen.jpg" />
-          <h4>Gabe Newell</h4>
+          <Avatar src={user.photoURL} />
+          <h4>{user.displayName}</h4>
         </HeaderUserInfo>
 
         <IconButton>

@@ -15,11 +15,29 @@ import { ReactComponent as Logo2Dark } from "../../../assets/images/logo2-dark.s
 // Import: Material UI Core
 import { Button } from "@material-ui/core";
 
+// Import: auth, provider
+import { auth, provider } from "../../../firebase";
+
+// Import: StateProvider, reducer
+import { useStateValue } from "../../../StateProvider";
+import { actionTypes } from "../../../reducer";
+
 // page: Login
 function Login({ isDarkMode, setIsDarkMode }) {
+  // Enables extraction of properties from StateProvider
+  const [state, dispatch] = useStateValue();
+
   // Sign in function
   const signIn = () => {
-    // Sign in...
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: result.user,
+        });
+      })
+      .catch((error) => alert(error.message));
   };
 
   return (

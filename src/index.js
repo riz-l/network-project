@@ -8,13 +8,19 @@ import "./index.scss";
 // Import: Components
 import App from "./App.component";
 
+// Import: StateProvider, reducer
+import { StateProvider } from "./StateProvider";
+import reducer, { initialState } from "./reducer";
+
 // Import: Service Worker
 import * as serviceWorker from "./serviceWorker";
 
 // Render: App
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <App />
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -5,6 +5,9 @@ import { ThemeProvider } from "styled-components";
 // Import: Styling
 import "./App.styles.scss";
 
+// Import: StateProvider
+import { useStateValue } from "./StateProvider";
+
 // Import: Themes
 import lightTheme from "./themes/light";
 import darkTheme from "./themes/dark";
@@ -20,10 +23,10 @@ import Sidebar from "./components/UI/Sidebar/Sidebar.component";
 // Component: App
 function App() {
   // State = isDarkMode
-  const [isDarkMode, setIsDarkMode] = React.useState(getInitialMode());
+  const [isDarkMode, setIsDarkMode] = useState(getInitialMode());
 
   // Sets user preference for light/dark theme
-  React.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(isDarkMode));
   }, [isDarkMode]);
 
@@ -54,8 +57,8 @@ function App() {
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
 
-  // User control
-  const user = null;
+  // Pulls user from StateProvider
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <>
