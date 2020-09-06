@@ -13,15 +13,31 @@ import Brightness7Icon from "@material-ui/icons/Brightness7";
 // Import: Material Core
 import { Avatar, IconButton } from "@material-ui/core";
 
+// Import: Logo
+import { ReactComponent as LogoLight } from "../../../assets/images/logo-light.svg";
+import { ReactComponent as LogoDark } from "../../../assets/images/logo-dark.svg";
+import { ReactComponent as Logo2Light } from "../../../assets/images/logo2-light.svg";
+import { ReactComponent as Logo2Dark } from "../../../assets/images/logo2-dark.svg";
+
 // UI: Header
 function Header({ isDarkMode, setIsDarkMode }) {
   return (
     <HeaderContainer>
       <HeaderLeft>
-        <img
+        {isDarkMode ? (
+          <Logo2Light className="HeaderLogo" />
+        ) : (
+          <Logo2Dark className="HeaderLogo" />
+        )}
+        {/* <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png"
           alt="Facebook Logo"
-        />
+        /> */}
+      </HeaderLeft>
+
+      <HeaderCenter></HeaderCenter>
+
+      <HeaderRight>
         <IconButton
           onClick={() => {
             setIsDarkMode((isDarkMode) => !isDarkMode);
@@ -42,14 +58,10 @@ function Header({ isDarkMode, setIsDarkMode }) {
             />
           )}
         </IconButton>
-      </HeaderLeft>
 
-      <HeaderCenter></HeaderCenter>
-
-      <HeaderRight>
         <HeaderUserInfo>
-          <Avatar src="https://images.unsplash.com/photo-1486649567693-aaa9b2e59385?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
-          <h4>rizji</h4>
+          <Avatar src="https://gamespot1.cbsistatic.com/uploads/scale_landscape/mig/6/2/0/6/2236206-gabe_newell_59018_screen.jpg" />
+          <h4>Gabe Newell</h4>
         </HeaderUserInfo>
 
         <IconButton>
@@ -81,7 +93,7 @@ const HeaderContainer = styled.div`
   box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 10px 20px;
   position: sticky;
   top: 0;
   transition: all 250ms linear;
@@ -94,17 +106,18 @@ const HeaderLeft = styled.div`
   display: flex;
   justify-content: space-evenly;
 
+  & .HeaderLogo {
+    margin: 0;
+    padding: 0;
+  }
+
   & img {
     height: 40px;
   }
 
-  & .MuiButtonBase-root {
-    margin-left: 10px;
-    transition: all 250ms linear;
-
-    &:hover {
-      background: ${(props) => props.theme.colors.global.secondaryBackground};
-    }
+  & .HeaderLogo {
+    height: 40px;
+    width: 100px;
   }
 `;
 
@@ -138,7 +151,7 @@ const HeaderRight = styled.div`
 const HeaderUserInfo = styled.div`
   align-items: center;
   display: flex;
-  margin-right: 10px;
+  margin: 0 10px;
 
   & h4 {
     color: ${(props) => props.theme.colors.global.primaryText};

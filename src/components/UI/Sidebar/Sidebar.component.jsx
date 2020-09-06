@@ -9,7 +9,7 @@ import BuildIcon from "@material-ui/icons/Build";
 import PermMediaIcon from "@material-ui/icons/PermMedia";
 import SettingsIcon from "@material-ui/icons/Settings";
 
-// Import: Components
+// Import: UI
 import SidebarRow from "./SidebarRow/SidebarRow.component";
 
 // UI: Sidebar
@@ -17,8 +17,8 @@ function Sidebar() {
   return (
     <SideBarContainer>
       <SidebarRow
-        src="https://images.unsplash.com/photo-1486649567693-aaa9b2e59385?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-        title="rizji"
+        src="https://gamespot1.cbsistatic.com/uploads/scale_landscape/mig/6/2/0/6/2236206-gabe_newell_59018_screen.jpg"
+        title="Gabe Newell"
       />
       <SidebarRow Icon={HomeIcon} title="Home" />
       <SidebarRow Icon={GroupIcon} title="Looking for Group" />

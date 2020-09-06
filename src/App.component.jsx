@@ -9,9 +9,10 @@ import "./App.styles.scss";
 import lightTheme from "./themes/light";
 import darkTheme from "./themes/dark";
 
-// Import: Components
-import Button from "./components/UI/Button/Button.component";
-import Card from "./components/UI/Card/Card.component";
+// Import: pages
+import Login from "./components/pages/Login/Login.component";
+
+// Import: UI
 import Container from "./components/UI/Container/Container.component";
 import Header from "./components/UI/Header/Header.component";
 import Sidebar from "./components/UI/Sidebar/Sidebar.component";
@@ -26,7 +27,7 @@ function App() {
     localStorage.setItem("dark", JSON.stringify(isDarkMode));
   }, [isDarkMode]);
 
-  // If returning user expressed preference for dark theme,
+  // If returning user expressed preference for dark theme previously,
   // theme is set to dark
   // otherwise, theme is set to light
   function getInitialMode() {
@@ -46,6 +47,7 @@ function App() {
     }
   }
 
+  // Looks for user's preferred color scheme
   function getPrefColorScheme() {
     if (!window.matchMedia) return;
 
@@ -56,7 +58,7 @@ function App() {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Container>
-      <Sidebar />
+        <Sidebar />
       </Container>
     </ThemeProvider>
   );
