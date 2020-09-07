@@ -210,6 +210,10 @@ const SignUpFooter = styled.div`
   & .SignUpFooter__text {
     color: ${(props) => props.theme.colors.global.secondaryText};
 
+    & a {
+      outline: none;
+    }
+
     & .SignUpFooter__link {
       color: ${(props) => props.theme.colors.global.primaryHighlight};
       cursor: pointer;

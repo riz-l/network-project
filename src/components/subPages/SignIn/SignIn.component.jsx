@@ -222,6 +222,10 @@ const SignInFooter = styled.div`
   & .SignInFooter__text {
     color: ${(props) => props.theme.colors.global.secondaryText};
 
+    & a {
+      outline: none;
+    }
+
     & .SignInFooter__link {
       color: ${(props) => props.theme.colors.global.primaryHighlight};
       cursor: pointer;
