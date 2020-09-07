@@ -142,6 +142,10 @@ const LoginLeftContainer = styled.div`
   display: grid;
   flex: 1;
   place-items: center;
+
+  @media (max-width: 1255px) {
+    display: none;
+  }
 `;
 
 // Styled: LoginLeft
@@ -300,13 +304,13 @@ const LoginRightInput = styled.div`
 
     &:hover {
       box-shadow: 0 0 10px
-        ${(props) => props.theme.colors.global.primaryHighlight};
+        ${(props) => props.theme.colors.global.googleHighlight};
       transition: all 150ms linear;
     }
 
     &:focus {
       box-shadow: 0 0 10px
-        ${(props) => props.theme.colors.global.secondaryHighlight};
+        ${(props) => props.theme.colors.global.googleHighlightHover};
       outline: none !important;
       transition: all 150ms linear;
     }
@@ -334,9 +338,30 @@ const LoginRightSignUp = styled.div`
       padding: 1rem 0.5rem;
       transition: all 150ms linear;
 
+      position: relative;
+      text-decoration: none;
+      display: inline-block;
+
       &:hover {
         color: ${(props) => props.theme.colors.global.secondaryHighlight};
         transition: all 150ms linear;
+      }
+
+      &:after {
+        display: block;
+        content: "";
+        border-bottom: solid 2px
+          ${(props) => props.theme.colors.global.secondaryHighlight};
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+        transform-origin: 100% 50%;
+      }
+
+      &:hover:after,
+      &:focus:after,
+      &:active:after {
+        transform: scaleX(1);
+        transform-origin: 0 50%;
       }
     }
   }

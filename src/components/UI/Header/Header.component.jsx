@@ -11,7 +11,7 @@ import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Brightness2Icon from "@material-ui/icons/Brightness2";
-import Brightness7Icon from "@material-ui/icons/Brightness7";
+import WbSunnyIcon from "@material-ui/icons/WbSunny";
 
 // Import: Material Core
 import { Avatar, IconButton } from "@material-ui/core";
@@ -51,7 +51,7 @@ function Header({ isDarkMode, setIsDarkMode }) {
               }}
             />
           ) : (
-            <Brightness7Icon
+            <WbSunnyIcon
               style={{
                 color: "#878c92",
               }}
