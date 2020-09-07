@@ -70,7 +70,7 @@ function SignUp() {
           <input
             className="InputContainer"
             type="password"
-            placeholder="Password"
+            placeholder="Confirm password"
           />
         </SignUpInput>
         <Button>Create Account</Button>
@@ -117,7 +117,6 @@ const SignUpMain = styled.div`
     display: flex;
     font-size: 1.2rem;
     justify-content: center;
-    padding: 1rem 0;
     text-align: center;
     width: 100%;
 
