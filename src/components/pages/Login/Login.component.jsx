@@ -242,13 +242,16 @@ const LoginRightButtonContainer = styled.div`
 
   & .GoogleButton {
     background: ${(props) => props.theme.colors.global.googleHighlight};
-    color: ##ffffff;
     flex: 9;
     margin-right: 20px;
 
     &:hover {
       background: ${(props) => props.theme.colors.global.googleHighlightHover};
       color: #edeef2;
+    }
+
+    & span {
+      color: #ffffff;
     }
   }
 
