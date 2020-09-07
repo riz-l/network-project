@@ -17,10 +17,8 @@ import Brightness7Icon from "@material-ui/icons/Brightness7";
 import { Avatar, IconButton } from "@material-ui/core";
 
 // Import: Logo
-import { ReactComponent as LogoLight } from "../../../assets/images/logo-light.svg";
-import { ReactComponent as LogoDark } from "../../../assets/images/logo-dark.svg";
-import { ReactComponent as Logo2Light } from "../../../assets/images/logo2-light.svg";
-import { ReactComponent as Logo2Dark } from "../../../assets/images/logo2-dark.svg";
+import { ReactComponent as LogoLight } from "../../../assets/images/logo2-light.svg";
+import { ReactComponent as LogoDark } from "../../../assets/images/logo2-dark.svg";
 
 // UI: Header
 function Header({ isDarkMode, setIsDarkMode }) {
@@ -31,9 +29,9 @@ function Header({ isDarkMode, setIsDarkMode }) {
     <HeaderContainer>
       <HeaderLeft>
         {isDarkMode ? (
-          <Logo2Light className="HeaderLogo" />
+          <LogoLight className="HeaderLogo" />
         ) : (
-          <Logo2Dark className="HeaderLogo" />
+          <LogoDark className="HeaderLogo" />
         )}
       </HeaderLeft>
 
