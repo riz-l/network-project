@@ -236,12 +236,11 @@ const SignUpFooter = styled.div`
     & .SignUpFooter__link {
       color: ${(props) => props.theme.colors.global.primaryHighlight};
       cursor: pointer;
+      display: inline-block;
       padding: 1rem 0.5rem;
-      transition: all 150ms linear;
-
       position: relative;
       text-decoration: none;
-      display: inline-block;
+      transition: all 150ms linear;
 
       &:hover {
         color: ${(props) => props.theme.colors.global.secondaryHighlight};
@@ -249,13 +248,14 @@ const SignUpFooter = styled.div`
       }
 
       &:after {
-        display: block;
-        content: "";
         border-bottom: solid 2px
           ${(props) => props.theme.colors.global.secondaryHighlight};
+        content: "";
+        display: block;
+        margin-top: 4px;
         transform: scaleX(0);
-        transition: transform 250ms ease-in-out;
         transform-origin: 100% 50%;
+        transition: transform 250ms ease-in-out;
       }
 
       &:hover:after,
