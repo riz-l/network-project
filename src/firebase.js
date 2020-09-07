@@ -23,10 +23,10 @@ const db = firebaseApp.firestore();
 const auth = firebase.auth();
 
 // Enables Google authentication via Firebase
-const provider = new firebase.auth.GoogleAuthProvider();
+const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 // Export: auth, provider
-export { auth, provider };
+export { auth, googleProvider };
 
 // Export: db
 export default db;

@@ -7,6 +7,7 @@ export default {
       primaryText: "#ffffff",
       secondaryText: "#edeef2",
       primaryHighlight: "#f9545e",
+      secondaryHighlight: "#f83a47",
       googleHighlight: "#4285f4",
       googleHighlightHover: "#2a75f3",
     },
