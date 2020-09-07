@@ -252,6 +252,7 @@ const LoginRightButtonContainer = styled.div`
 
     & span {
       color: #ffffff;
+      text-transform: none;
     }
   }
 
