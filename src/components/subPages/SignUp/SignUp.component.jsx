@@ -146,8 +146,7 @@ const SignUpButtonContainer = styled.div`
 
   & .GoogleButton {
     background: ${(props) => props.theme.colors.global.googleHighlight};
-    flex: 9;
-    margin-right: 20px;
+    flex: 1;
 
     &:hover {
       background: ${(props) => props.theme.colors.global.googleHighlightHover};
@@ -157,27 +156,6 @@ const SignUpButtonContainer = styled.div`
     & span {
       color: #ffffff;
       text-transform: none;
-    }
-  }
-
-  & .TwitterButton {
-    background: ${(props) => props.theme.colors.global.secondaryBackground};
-    flex: 1;
-    transition: all 150ms linear;
-
-    & svg {
-      color: ${(props) => props.theme.colors.global.secondaryText};
-      transition: all 150ms linear;
-    }
-
-    &:hover {
-      background: ${(props) => props.theme.colors.global.tertiaryBackground};
-      transition: all 150ms linear;
-
-      & svg {
-        color: ${(props) => props.theme.colors.global.secondaryBackground};
-        transition: all 150ms linear;
-      }
     }
   }
 `;
