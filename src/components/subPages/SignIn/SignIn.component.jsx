@@ -82,13 +82,8 @@ export default SignIn;
 
 // Styled: SignInContainer
 const SignInContainer = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100%;
-  min-width: 60%;
-  text-align: left;
+  display: grid;
+  place-items: center;
 `;
 
 // Styled: SignInMain
@@ -216,7 +211,7 @@ const SignInInput = styled.div`
 
 // Styled: SignInFooter
 const SignInFooter = styled.div`
-  padding: 5rem 0;
+  padding-top: 1rem;
   text-align: center;
 
   & .SignInFooter__text {

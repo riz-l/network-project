@@ -23,12 +23,14 @@ function Login({ isDarkMode, setIsDarkMode }) {
     <LoginContainer>
       <LoginLeftContainer>
         <LoginLeft>
-          {isDarkMode ? (
-            <LogoLight className="HeaderLogo" />
-          ) : (
-            <LogoDark className="HeaderLogo" />
-          )}
-          <p>Discover a social network for gamers all over the world.</p>
+          <LoginLeftIntro>
+            {isDarkMode ? (
+              <LogoLight className="HeaderLogo" />
+            ) : (
+              <LogoDark className="HeaderLogo" />
+            )}
+            <p>Discover a social network for gamers all over the world.</p>
+          </LoginLeftIntro>
           {isDarkMode ? (
             <LoginLeftSplash>
               <LoginSplashLight />
@@ -95,10 +97,17 @@ const LoginLeft = styled.div`
   align-items: flex-start;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: center;
   margin: 0 2rem;
   text-align: left;
   width: 80%;
+`;
+
+// Styled: LoginLeftIntro
+const LoginLeftIntro = styled.div`
+  height: 40%;
+  width: 100%;
 
   & .HeaderLogo {
     height: 75px;
@@ -115,12 +124,14 @@ const LoginLeft = styled.div`
 
 // Styled: LoginLeftSplash
 const LoginLeftSplash = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  height: 40%;
   width: 100%;
 
+  display: grid;
+  place-items: center;
+
   & svg {
+    height: 100%;
     width: 100%;
   }
 `;
