@@ -13,12 +13,8 @@ import lightTheme from "./themes/light";
 import darkTheme from "./themes/dark";
 
 // Import: pages
+import Dashboard from "./components/pages/Dashboard/Dashboard.component";
 import Login from "./components/pages/Login/Login.component";
-
-// Import: UI
-import Container from "./components/UI/Container/Container.component";
-import Header from "./components/UI/Header/Header.component";
-import Sidebar from "./components/UI/Sidebar/Sidebar.component";
 
 // Component: App
 function App() {
@@ -68,10 +64,7 @@ function App() {
         </ThemeProvider>
       ) : (
         <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-          <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-          <Container>
-            <Sidebar />
-          </Container>
+          <Dashboard isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         </ThemeProvider>
       )}
     </>
