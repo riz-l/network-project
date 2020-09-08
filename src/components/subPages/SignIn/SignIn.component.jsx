@@ -56,7 +56,12 @@ function SignIn() {
           />
         </SignInInput>
         <SignInInput>
-          <h3>Password</h3>
+          <SignInPassword>
+            <h3>Password</h3>
+            <Link to="/password-reset">
+              <span>Forgot password?</span>
+            </Link>
+          </SignInPassword>
           <input
             className="InputContainer"
             type="password"
@@ -173,6 +178,7 @@ const SignInInput = styled.div`
 
   & h3 {
     color: ${(props) => props.theme.colors.global.secondaryText};
+    margin-bottom: 4px;
   }
 
   & .InputContainer {
@@ -206,6 +212,49 @@ const SignInInput = styled.div`
       font-size: 16px;
       outline-width: 0;
     }
+  }
+`;
+
+// Styled: SignInPassword
+const SignInPassword = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  & span {
+    color: ${(props) => props.theme.colors.global.primaryHighlight};
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    transition: all 150ms linear;
+
+    &:hover {
+      color: ${(props) => props.theme.colors.global.secondaryHighlight};
+      transition: all 150ms linear;
+    }
+
+    &:after {
+      border-bottom: solid 2px
+        ${(props) => props.theme.colors.global.secondaryHighlight};
+      content: "";
+      display: block;
+      margin-top: 4px;
+      transform: scaleX(0);
+      transform-origin: 100% 50%;
+      transition: transform 250ms ease-in-out;
+    }
+
+    &:hover:after,
+    &:focus:after,
+    &:active:after {
+      transform: scaleX(1);
+      transform-origin: 0 50%;
+    }
+  }
+
+  & a {
+    outline: none;
   }
 `;
 

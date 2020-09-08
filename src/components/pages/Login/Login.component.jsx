@@ -16,6 +16,7 @@ import { ReactComponent as LoginSplashDark } from "../../../assets/images/login-
 // Import: subPages
 import SignIn from "../../subPages/SignIn/SignIn.component";
 import SignUp from "../../subPages/SignUp/SignUp.component";
+import PasswordReset from "../../subPages/PasswordReset/PasswordReset.component";
 
 // page: Login
 function Login({ isDarkMode, setIsDarkMode }) {
@@ -47,6 +48,7 @@ function Login({ isDarkMode, setIsDarkMode }) {
         <Switch>
           <Route exact path="/" component={SignIn} />
           <Route path="/sign-up" component={SignUp} />
+          <Route path="/password-reset" component={PasswordReset} />
         </Switch>
       </LoginRightContainer>
     </LoginContainer>

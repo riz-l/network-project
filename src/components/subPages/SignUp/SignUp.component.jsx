@@ -92,19 +92,15 @@ export default SignUp;
 
 // Styled: SignUpContainer
 const SignUpContainer = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100%;
-  min-width: 60%;
-  text-align: left;
+  display: grid;
+  place-items: center;
+  width: 30%;
 `;
 
 // Styled: SignUpMain
 const SignUpMain = styled.div`
   height: 100%;
-  width: 60%;
+  width: 100%;
 
   & h2 {
     color: ${(props) => props.theme.colors.global.primaryText};
@@ -204,7 +200,7 @@ const SignUpInput = styled.div`
 
 // Styled: SignUpFooter
 const SignUpFooter = styled.div`
-  margin: 2rem 0;
+  padding-top: 1rem;
   text-align: center;
 
   & .SignUpFooter__text {
