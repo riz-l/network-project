@@ -21,8 +21,8 @@ function SignIn() {
   // Enables extraction of properties from StateProvider
   const [state, dispatch] = useStateValue();
 
-  // Sign in function
-  const signIn = () => {
+  // Google sign in function
+  const googleSignIn = () => {
     auth
       .signInWithPopup(googleProvider)
       .then((result) => {
@@ -39,7 +39,7 @@ function SignIn() {
       <SignInMain>
         <h2>Sign in to rizji</h2>
         <SignInButtonContainer>
-          <Button className="GoogleButton" type="submit" onClick={signIn}>
+          <Button className="GoogleButton" type="submit" onClick={googleSignIn}>
             Sign in with Google
           </Button>
           <Button className="TwitterButton">

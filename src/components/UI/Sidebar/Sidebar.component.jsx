@@ -40,4 +40,5 @@ export default Sidebar;
 const SideBarContainer = styled.div`
   flex: 0.33;
   padding: 25px 10px;
+  position: fixed;
 `;
