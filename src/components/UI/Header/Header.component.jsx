@@ -6,11 +6,11 @@ import styled from "styled-components";
 import { useStateValue } from "../../../StateProvider";
 
 // Import: Material UI Icons
-import AddIcon from "@material-ui/icons/Add";
+import Brightness2Icon from "@material-ui/icons/Brightness2";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Brightness2Icon from "@material-ui/icons/Brightness2";
+import SearchIcon from "@material-ui/icons/Search";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
 
 // Import: Material Core
@@ -33,6 +33,10 @@ function Header({ isDarkMode, setIsDarkMode }) {
         ) : (
           <LogoDark className="HeaderLogo" />
         )}
+
+        <IconButton>
+          <SearchIcon />
+        </IconButton>
       </HeaderLeft>
 
       <HeaderCenter></HeaderCenter>
@@ -114,6 +118,12 @@ const HeaderLeft = styled.div`
   & .HeaderLogo {
     height: 40px;
     width: 100px;
+  }
+
+  & .MuiIconButton-label {
+    & .MuiSvgIcon-root {
+      color: ${(props) => props.theme.colors.global.primaryText};
+    }
   }
 `;
 
