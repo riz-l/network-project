@@ -37,7 +37,7 @@ function Header({ isDarkMode, setIsDarkMode }) {
 
       <HeaderCenter></HeaderCenter>
 
-      <HeaderRight>      
+      <HeaderRight>
         <IconButton
           onClick={() => {
             setIsDarkMode((isDarkMode) => !isDarkMode);
@@ -63,10 +63,6 @@ function Header({ isDarkMode, setIsDarkMode }) {
           <Avatar src={user.photoURL} />
           <h4>{user.displayName}</h4>
         </HeaderUserInfo>
-
-        <IconButton>
-          <AddIcon />
-        </IconButton>
 
         <IconButton>
           <ForumIcon />

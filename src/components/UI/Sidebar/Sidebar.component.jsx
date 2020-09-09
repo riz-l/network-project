@@ -38,7 +38,8 @@ function Sidebar() {
 export default Sidebar;
 
 const SideBarContainer = styled.div`
-  flex: 0.33;
-  padding: 25px 10px;
-  position: fixed;
+  flex: initial;
+  padding: 0 10px;
+  margin-right: 1rem;
+  width: 300px;
 `;

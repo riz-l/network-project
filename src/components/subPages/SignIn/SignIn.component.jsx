@@ -3,6 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+// Import: Firebase
+import { firebaseApp } from "../../../firebase";
+
 // Import: Material UI Icons
 import TwitterIcon from "@material-ui/icons/Twitter";
 
@@ -46,12 +49,15 @@ function SignIn() {
             <TwitterIcon />
           </Button>
         </SignInButtonContainer>
+
         <p>Or</p>
+
         <SignInInput>
           <h3>Email Address</h3>
           <input
             className="InputContainer"
             type="email"
+            name="email"
             placeholder="Email address"
           />
         </SignInInput>
@@ -65,10 +71,12 @@ function SignIn() {
           <input
             className="InputContainer"
             type="password"
+            name="password"
             placeholder="Password"
           />
         </SignInInput>
-        <Button>Sign in</Button>
+        <Button type="submit">Sign in</Button>
+
         <SignInFooter>
           <span className="SignInFooter__text">
             Not a member?
