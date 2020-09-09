@@ -94,7 +94,7 @@ export default SignUp;
 const SignUpContainer = styled.div`
   display: grid;
   place-items: center;
-  width: 40%;
+  width: 30%;
 `;
 
 // Styled: SignUpMain

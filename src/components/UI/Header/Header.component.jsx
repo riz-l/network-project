@@ -37,7 +37,7 @@ function Header({ isDarkMode, setIsDarkMode }) {
 
       <HeaderCenter></HeaderCenter>
 
-      <HeaderRight>
+      <HeaderRight>      
         <IconButton
           onClick={() => {
             setIsDarkMode((isDarkMode) => !isDarkMode);

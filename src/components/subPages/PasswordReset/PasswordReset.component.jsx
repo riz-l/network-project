@@ -45,7 +45,7 @@ export default PasswordReset;
 const PasswordResetContainer = styled.div`
   display: grid;
   place-items: center;
-  width: 40%;
+  width: 30%;
 `;
 
 // Styled: PasswordResetMain
