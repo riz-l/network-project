@@ -16,8 +16,6 @@ export default Home;
 
 // Styled: HomeContainer
 const HomeContainer = styled.div`
-  ${"" /* background: ${(props) => props.theme.colors.global.primaryBackground}; */}
-  background: tomato;
   flex: auto;
   height: 100%;
   width: 100%;
